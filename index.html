@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Weather APP </title>
+</head>
+
+
+<body>
+    
+    <div class="weather-box">
+     
+
+        <div class="CurrentWeather">
+          <button id="music-btn" type="button" value="sound" onmousedown="muzik.play()"> Song Of The Weather </button>
+            <div id="logoBoxContainer" style="display: flex; justify-content: center; margin-top: 100px;">
+              <div id="logobox" class="logoBoxClass">   <img
+                src="http://openweathermap.org/img/wn/10d@4x.png"
+                class="card-img-top"
+                alt="Weather description"
+              /></div>
+            </div>
+            <!-- <div class="img-box"> <img src="" alt=""> </div> -->
+            <div class="City-temputure">
+             
+                <div id="currentTemp" class="CurrentDegrees"></div>
+                
+                <div class="Current-city-time">
+                    <div class="CurrentCity"> Atlanta</div>
+                    
+                    <div class="time-date"> 
+                        <div id="currentTime" class="Current-time"></div>
+                        <div id="currentDate" class="Current-date"></div>
+                        <div id="latitude" class="latitude"></div>
+                        <div id="longitude" class="longitude"></div>
+                        <div id="locationData" class="locationData"></div>
+
+                    </div>
+
+                </div>
+
+           
+                
+             </div>
+
+            
+
+
+
+        </div>
+        
+        <div onload="main.js" id="Attributes" >
+            <main id="container" class="container">  <!-- this is the container for all the weather data to populate from API-->
+              <h2>Weather</h2>
+              <!-- results for weather data -->
+              <div id="putTxtHere" class="weather row gx-2">
+                 <div class="col">
+                  <div class="card" style="width: 30vw">
+                    <h5 class="card-title p-2">Date</h5>
+                    <img
+                      src="http://openweathermap.org/img/wn/10d@4x.png"
+                      class="card-img-top"
+                      alt="Weather description"
+                    />
+                    <div class="weather-icon"><img src="icons/unknown.png" /></div>
+
+                    <div class="card-body">
+                      <h3 class="card-title">Weather Label</h3>
+                      <p id="highTempLowTemp" class="card-text">High Temp Low Temp</p>
+                      <p id="feelsLike" class="card-text">High Feels like</p>
+                      <p id="pressure" class="card-text">Pressure</p>
+                      <p id="humidity" class="card-text">Humidty</p>
+                      <p id="uvIndex" class="card-text">UV Index</p>
+                      <p id="precipitation" class="card-text">Precipitation</p>
+                      <p id="dewPoint" class="card-text">Dew Point</p>
+                      <p id="windSpeed" class="card-text">Wind speed and direction</p>
+                      <p id="sunrise" class="card-text">Sunrise</p>
+                      <p id="sunset" class="card-text">Sunset</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+           
+        </div>
+
+    </div> 
+
+
+</body>
+
+<script src="main.js"></script>
+<script src="logoinject.js"></script>
+<script src="navi.js"></script>
+<script>
+  document.getElementById("currentDate").innerHTML = Date();
+  </script>
+
+    <script> //current Date script
+      let today = new Date();
+      let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        document.getElementById("currentTime").value = time;
+      </script>
+
+      <script> //Current Temp Script
+      let dayTemp = day.temp 
+      document.getElementById('currentTemp')
+      document.getElementById("currentDate").innerHTML = dayTemp;
+
+      </script>
+
+<script> //Current Temp Script
+  let dayIcon = day.weather[0].icon
+  document.getElementById('currentTemp')
+  document.getElementById("currentDate").innerHTML = dayTemp;
+
+  </script>
+
+  <script>
+    let muzik = new Audio ()
+    muzik.src = "TheRain.mp4"
+
+  </script>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
